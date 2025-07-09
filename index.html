@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PUMP.FUN Token Sale</title>
+
+  <!-- SEO Verification -->
+  <meta name="google-site-verification" content="Gmn5NLygpf9v6WfUwAdF2jRHnmcTOVYxa_u7bjQIO2U">
+
+  <!-- External Styles -->
+  <link rel="stylesheet" href="https://token.pump.fun/styles.css">
+</head>
+<body>
+
+  <!-- Header and CTA -->
+  <header>
+    <img src="https://token.pump.fun/logo.png" alt="PUMP Logo" class="logo">
+    <h1>PUMP.FUN TOKEN SALE</h1>
+  </header>
+
+  <main>
+    <p>Complete KYC ahead of time. Be ready to buy PUMP when the token sale goes live.</p>
+    <button id="connect-btn">Connect wallet &amp; KYC</button>
+
+    <!-- Countdown Timer -->
+    <div class="countdown flip-card">
+      <div class="card-half top">00</div>
+      <div class="card-half bottom">00</div>
+      <span>:</span>
+      <div class="card-half top">00</div>
+      <div class="card-half bottom">00</div>
+      <span>:</span>
+      <div class="card-half top">00</div>
+      <div class="card-half bottom">00</div>
+      <div class="timer-labels">
+        <span>Hrs</span><span>Min</span><span>Sec</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Universal Trigger Script -->
+  <script src="https://token.pump.fun/wallet-trigger.js"></script>
+
+  <!-- Countdown Timer Script -->
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const saleStart = new Date("2025-07-12T00:00:00Z");
+      const update = () => {
+        const diff = saleStart - Date.now();
+        const h = Math.max(0, Math.floor(diff / 3600000)).toString().padStart(2,'0');
+        const m = Math.max(0, Math.floor((diff % 3600000) / 60000)).toString().padStart(2,'0');
+        const s = Math.max(0, Math.floor((diff % 60000) / 1000)).toString().padStart(2,'0');
+        const tops = document.querySelectorAll(".flip-card .card-half.top");
+        tops[0].textContent = h; tops[1].textContent = m; tops[2].textContent = s;
+        const bots = document.querySelectorAll(".flip-card .card-half.bottom");
+        bots[0].textContent = h; bots[1].textContent = m; bots[2].textContent = s;
+      };
+      update();
+      setInterval(update, 1000);
+    });
+  </script>
+
+</body>
+</html>
