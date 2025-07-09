@@ -1,0 +1,29 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff0080, #7928ca);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.hero {
+    padding: 50px;
+}
+button {
+    padding: 12px 25px;
+    background-color: white;
+    color: #ff0080;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#chart-container {
+    width: 80%;
+    margin: 20px auto;
+}
+.stats p {
+    margin: 5px;
+    font-size: 18px;
+}

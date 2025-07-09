@@ -1,0 +1,10 @@
+
+{
+  "name": "Pump.fun Token",
+  "symbol": "PUMP",
+  "description": "The official Pump.fun experience token — power the pump, ride the hype.",
+  "decimals": 18,
+  "total_supply": "1000000000000000000000000000",
+  "tags": ["meme", "pump", "locked liquidity", "community"],
+  "image": "https://example.com/logo.png"
+}
