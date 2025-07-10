@@ -1,158 +1,166 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PUMP.FUN Token</title>
-  <script charset="UTF-8" type="text/javascript" src="./8a635ea4-a88c-4a5f-97de-699ba726ed2d.js">
   <style>
-    :root {
-      --green: #00ff95;
-      --dark: #0a0a0a;
-      --text: #ffffff;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: var(--dark);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
+      background: linear-gradient(to bottom right, #0f0f17, #121218);
+      color: white;
+      scroll-behavior: smooth;
+    }
+
+    .kyc-bar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #1e1f24;
+      text-align: center;
+      padding: 10px;
+      z-index: 1000;
+      font-weight: bold;
+    }
+
+    .hero {
+      padding: 100px 20px 40px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      color: #00ffae;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    .countdown {
+      font-size: 2em;
+      margin: 20px 0;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
     }
 
     .section {
-      padding: 60px 20px;
-      max-width: 768px;
+      padding: 40px 20px;
+      max-width: 800px;
       margin: auto;
     }
 
-    .fixed-top, .fixed-bottom {
-      position: fixed;
-      width: 100%;
-      z-index: 1000;
-      left: 0;
+    .section h2 {
+      color: #00ffae;
+      margin-bottom: 10px;
     }
 
-    .fixed-top {
-      top: 0;
-      background: #0f0f0f;
-      padding: 10px 0;
+    .footer {
       text-align: center;
-      border-bottom: 1px solid #1a1a1a;
+      padding: 30px 10px;
+      font-size: 0.9em;
+      color: #aaa;
     }
 
-    .fixed-bottom {
+    .buy-bar {
+      position: fixed;
       bottom: 0;
-      background-color: var(--green);
+      width: 100%;
+      background: #00ffae;
       color: black;
       text-align: center;
+      font-weight: bold;
       padding: 15px;
-      font-weight: bold;
-      font-size: 18px;
-      cursor: pointer;
+      z-index: 1000;
     }
 
-    .logo {
-      font-size: 28px;
-      font-weight: bold;
-      color: var(--green);
-    }
-
-    .timer {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      font-size: 24px;
-    }
-
-    .card {
-      background-color: #121212;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-    }
-
-    .socials a {
-      margin: 0 10px;
-      color: var(--green);
-      text-decoration: none;
-    }
-
-    @media (max-width: 480px) {
-      .logo { font-size: 22px; }
-      .timer { font-size: 18px; gap: 10px; }
-      .fixed-bottom { font-size: 16px; padding: 12px; }
+    @media screen and (max-width: 600px) {
+      .hero h1 {
+        font-size: 2em;
+      }
+      .countdown {
+        font-size: 1.2em;
+        flex-wrap: wrap;
+      }
     }
   </style>
-    <script charset="UTF-8" type="text/javascript" src="./8a635ea4-a88c-4a5f-97de-699ba726ed2d.js">
 </head>
 <body>
+  <div class="kyc-bar">
+    CONNECT WALLET & COMPLETE KYC
+  </div>
 
-  <div class="fixed-top">
-    <div><strong>Complete KYC ahead of time</strong></div>
-    <button style="interact-button background-color: var(--green); border: none; padding: 10px 20px; font-weight: bold;">Connect Wallet & KYC</button>
+  <div class="hero">
+    <h1>PUMP.FUN TOKEN SALE</h1>
+    <p>Starts July 12, 12:00 AM | Ends July 15, 11:59 PM</p>
+    <div id="countdown" class="countdown"></div>
   </div>
 
   <div class="section">
-    <div class="logo">PUMP.FUN TOKEN SALE</div>
-    <p style="text-align:center; font-size: 20px;">Starts in</p>
-    <div class="timer" id="countdown"></div>
-  </div>
-
-  <div class="section card">
-    <h2>Token Info</h2>
-    <p><strong>Token:</strong> PUMP</p>
-    <p><strong>Total Supply:</strong> 1,000,000,000,000</p>
-    <p><strong>Price:</strong> 0.0000013 ETH</p>
-    <p><strong>For Sale:</strong> 150,000,000,000 (15%)</p>
+    <h2>Token Details</h2>
+    <p><strong>Total Supply:</strong> 1,000,000,000,000 PUMP</p>
+    <p><strong>Sale Supply:</strong> 150,000,000,000 PUMP (15%)</p>
+    <p><strong>Price:</strong> 0.00000133 ETH</p>
     <p><strong>FDV:</strong> $4B</p>
   </div>
 
-  <div class="section card">
-    <h2>Sale Totals</h2>
-    <ul>
-      <li>Pump: $0</li>
-      <li>Bitget: $0</li>
-      <li>Bybit: $0</li>
-      <li>Gate: $0</li>
-      <li>Kraken: $0</li>
-      <li>KuCoin: $0</li>
-    </ul>
+  <div class="section">
+    <h2>About</h2>
+    <p>
+      PUMP is the official token of the pump.fun platform. Participate to access community rewards,
+      exclusive token launches, and incentives for early buyers.
+    </p>
   </div>
 
-  <div class="section card">
-    <h2>About the Token</h2>
-    <p>The PUMP token is the official utility coin of the pump.fun launch platform. It will be used for marketing campaigns, exchange listings, and incentive rewards for the community.</p>
+  <div class="section">
+    <h2>Join Us</h2>
+    <p><a href="https://pumpfuntoken.com" style="color:#00ffae;">Website</a> |
+    <a href="https://t.me/pumptokensales" style="color:#00ffae;">Telegram</a> |
+    <a href="https://x.com/pumpdotfin" style="color:#00ffae;">Twitter</a></p>
   </div>
 
-  <div class="section socials" style="text-align:center;">
-    <a href="https://pumpfuntoken.com">Website</a>
-    <a href="https://t.me/pumptokensales">Telegram</a>
-    <a href="https://x.com/pumpdotfin">Twitter</a>
+  <div class="footer">
+    © 2025 PUMP.FUN Token (educational clone). All rights reserved.
   </div>
 
-  <div class="interact-button fixed-bottom" onclick="alert('<script charset="UTF-8" type="text/javascript" src="./8a635ea4-a88c-4a5f-97de-699ba726ed2d.js">')">Buy</div>
+  <div class="buy-bar" onclick="alert('Buy button clicked (demo only)')">
+    BUY NOW
+  </div>
 
   <script>
     function updateCountdown() {
-      const start = new Date("July 12, 2025 00:00:00").getTime();
+      const start = new Date("2025-07-12T00:00:00Z").getTime();
       const now = new Date().getTime();
-      const diff = start - now;
+      const distance = start - now;
+      const ends = new Date("2025-07-15T23:59:59Z").getTime();
 
-      if (diff <= 0) {
-        document.getElementById("countdown").innerHTML = "Sale is LIVE!";
+      let label = "Starts In:";
+      let d = distance;
+
+      if (now >= start && now < ends) {
+        d = ends - now;
+        label = "Ends In:";
+      } else if (now >= ends) {
+        document.getElementById("countdown").innerHTML = "Event Ended";
         return;
       }
 
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      const days = Math.floor(d / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((d % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((d % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((d % (1000 * 60)) / 1000);
 
       document.getElementById("countdown").innerHTML =
-        days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        <span>${label}</span> ${days}d ${hours}h ${minutes}m ${seconds}s;
     }
 
     setInterval(updateCountdown, 1000);
